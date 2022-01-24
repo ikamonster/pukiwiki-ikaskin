@@ -44,11 +44,11 @@ if (defined('TDIARY_THEME')) {
 
 ## カスタマイズ
 
-PukiWiki ルートディレクトリにある設定ファイル default.ini.php を開き、末尾に下記のコードを追加（コピー＆ペースト）してください。
+PukiWiki ルートディレクトリにある設定ファイル default.ini.php を開き、末尾に下記のコードを追記（コピー＆ペースト）してください。
 
 ```
 /////////////////////////////////////////////////
-// イカスキン設定
+// イカスキン ika.skin.php 設定
 define('IKASKIN_TITLE',             0); // ヘッダータイトル（0:ページ名, 1:ウィキ名）
 define('IKASKIN_THEME',             0); // カラーテーマ（0:ライト, 1:ダーク, 2:OS設定に自動適応）
 define('IKASKIN_LINKCOLOR_LIGHT',  ''); // ライトテーマのリンク色（例：'#0000ff'）
@@ -60,19 +60,19 @@ define('IKASKIN_MENU_WIDTH',        0); // メニューバーの幅（px単位, 
 define('IKASKIN_BODY_WIDTH',        0); // ページ本文の幅（px単位, 0:デフォルト）
 define('IKASKIN_WORDWRAP',          1); // 改行規則（0:禁則なし, 1:禁則あり）
 define('IKASKIN_SIMPLIFY',          0); // シンプル表示（0:No, 1:Yes）
-define('IKASKIN_COPYRIGHT',         0); // 管理人名の接頭辞（0:"Site admin", 1:"(C)"）
+define('IKASKIN_COPYRIGHT',         0); // 管理人名の接頭辞（0:"Site admin", 1:"©"）
 define('IKASKIN_MENU_ORDER',        0); // メニューバーの表示順序（0:MenuBar→本文→RightBar, 1:RightBar→本文→MenuBar）
 define('IKASKIN_LOGO',             ''); // サイトロゴ画像パス（例：'image/pukiwiki.png'）
 define('IKASKIN_FAVICON',          ''); // ファビコン画像パス（例：'/favicon.ico'）
 define('IKASKIN_APPLETOUCHICON',   ''); // 180×180px PNGアイコン画像パス（例：'apple-touch-icon.png'）
-define('IKASKIN_CSS',              ''); // CSSファイルパス（例：'ika.css'）
+define('IKASKIN_CSS',              ''); // CSSファイルパス（例：'mystyle.css'）
 define('IKASKIN_DISUSE_MAINJS',     0); // main.js不使用（0:No, 1:Yes）
 define('IKASKIN_DISUSE_SEARCH2JS',  0); // search2.js不使用（0:No, 1:Yes）
 ```
 
 左の「IKASKIN_○○」が設定項目、カンマの後の ’’ や 0 が設定値です。右側には項目の説明コメントがあります。
 
-変更したい項目の値を、説明に基づいて書き換えます。  
+変更したい項目の値を説明に基づいて書き換えます。  
 ファイル名などの文字列は必ず半角クォーテーション（「'」か「"」）で囲んでください。
 
 たとえば、文字の大きさを変更したければ「IKASIKIN_FONT_SIZE」の値を「16」などとします。  
@@ -84,6 +84,6 @@ define('IKASKIN_DISUSE_SEARCH2JS',  0); // search2.js不使用（0:No, 1:Yes）
 書き方や内容を誤るとエラーが発生したり、効果が表れなかったりします。  
 どれが原因かわかりにくくならないよう、一項目ずつ、画面の変化を確かめながら変更するとよいでしょう。
 
-なお、default.ini.php は PukiWiki 標準の設定ファイルの一つ（厳密にいえばpukiwiki.ini.phpで指定されている既定プロファイル）で、その他の各種動作も設定することができます。  
+なお、default.ini.php は PukiWiki 標準の設定ファイルの一つ（厳密にいえば pukiwiki.ini.php で指定されている既定プロファイル）で、その他の各種動作も設定することができます。  
 詳しくはファイル内のコメントや PukiWiki 公式サイトをご確認ください。  
-デフォルトでは一般に不要と思われる処理や表示も有効になっているため、ご自分のサイトでの必要やお好みに応じて設定し直すことを勧めます。
+デフォルトでは一般に不要と思われる高負荷な処理や表示も有効になっているため、ご自分のサイトでの必要やお好みに応じて設定し直すことを勧めます。
