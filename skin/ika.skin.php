@@ -1,6 +1,6 @@
 <?php
 // PukiWiki - Yet another WikiWikiWeb clone.
-// ika.skin.php v1.2.1
+// ika.skin.php v1.2.2
 // Copyright 2020 M.Taniguchi
 // License: GPL v3 or (at your option) any later version
 //
@@ -59,12 +59,13 @@ $image = &$_IMAGE['skin'];
 $rw    = !PKWK_READONLY;
 
 global	$rss_max;
+$pregFlag = 'i' . (PKWK_UTF8_ENABLE ? 'u' : '');
 $isHome = ($title === $defaultpage);
 $thisPageUri = get_page_uri($title, PKWK_URI_ABSOLUTE);
 $pageTitle = htmlsc($page_title);
 $longTitle = (!$isHome ? $title . ' - ' : '') . $pageTitle;
 $modifiedDate = date('Y-m-d\TH:i:sP', get_filetime($title));
-$pageName = preg_replace('/(\<[^\>]+\>|\s$)/i', '', $page);
+$pageName = preg_replace('/(\<[^\>]+\>|\s$)/' . $pregFlag, '', $page);
 $theme = array('_ikaskin_theme_light_', '_ikaskin_theme_dark_', '_ikaskin_theme_adaptive_')[(IKASKIN_THEME >= 0 && IKASKIN_THEME <= 2)? (int)IKASKIN_THEME : 0];
 $wordbreak = (IKASKIN_WORDWRAP)? ' _ikaskin_wordwrap_' : ' _ikaskin_wordbreak_';
 $simplify = (IKASKIN_SIMPLIFY)? ' _ikaskin_simplify_' : '';
@@ -157,7 +158,7 @@ if ($cssProperties) echo '<style>:root{' . $cssProperties . '}</style>';
 			require_once(PLUGIN_DIR . 'topicpath.inc.php');
 			$topicPath = ($isHome)? $title : plugin_topicpath_inline();
 			if ($topicPath) {
-				preg_match('/href\s?=\s?"([^"]*)"/i', $page, $matches);
+				preg_match('/href\s?=\s?"([^"]*)"/' . $pregFlag, $page, $matches);
 				$page = $matches[1];
 				$tmp = end(explode('</span>', $topicPath));
 				$topicPath = str_replace($tmp, '<a href="' . $page . '">' . $tmp . '</a>', $topicPath);
