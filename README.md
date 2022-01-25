@@ -72,13 +72,13 @@ define('IKASKIN_MENU_WIDTH',        0); // メニューバーの幅（px単位, 
 define('IKASKIN_BODY_WIDTH',        0); // ページ本文の幅（px単位, 0:デフォルト）
 define('IKASKIN_WORDWRAP',          1); // 改行規則（0:禁則なし, 1:禁則あり）
 define('IKASKIN_SIMPLIFY',          0); // シンプル表示（0:No, 1:Yes）
-define('IKASKIN_COPYRIGHT',         0); // 管理人名の接頭辞（0:"Site admin", 1:"©"）
+define('IKASKIN_COPYRIGHT',         0); // 管理人名の接頭辞（0:"Site admin", 1:"©", または任意文字列）
 define('IKASKIN_MENU_ORDER',        0); // メニューバーの表示順序（0:MenuBar→本文→RightBar, 1:RightBar→本文→MenuBar）
 define('IKASKIN_TABLE_ZEBRA',       0); // テーブル行の交互色分け（0:No, 1:Yes）
 define('IKASKIN_LOGO',             ''); // サイトロゴ画像パス（例：'image/pukiwiki.png'）
 define('IKASKIN_FAVICON',          ''); // ファビコン画像パス（例：'/favicon.ico'）
 define('IKASKIN_APPLETOUCHICON',   ''); // 180×180px PNGアイコン画像パス（例：'apple-touch-icon.png'）
-define('IKASKIN_CSS',              ''); // CSSファイルパス（例：'mystyle.css'）
+define('IKASKIN_CSS',              ''); // 追加CSSファイルパス（例：'mystyle.css'）
 define('IKASKIN_DISUSE_MAINJS',     0); // main.js不使用（0:No, 1:Yes）
 define('IKASKIN_DISUSE_SEARCH2JS',  0); // search2.js不使用（0:No, 1:Yes）
 ```
