@@ -231,7 +231,7 @@ if (PKWK_SKIN_SHOW_NAVBAR) {
 			if ($modifierlink && strpos($modifierlink, 'pukiwiki.example.com') === false) {
 				$adminPrefix = $adminPrefix . '<a href="' . $modifierlink . '">' . $modifier . '</a>';
 			} else
-			if ($modifier == 'anonymous') {
+			if ($modifier != 'anonymous') {
 				$adminPrefix = $adminPrefix . $modifier;
 			} else $adminPrefix = '';
 			if ($adminPrefix) echo '<div id="_Skin_Copyright_">' . $adminPrefix . "</div>\n";
