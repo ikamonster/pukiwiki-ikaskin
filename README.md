@@ -39,10 +39,10 @@ ika.skin.php を PukiWiki の skin ディレクトリに配置してください
 // Skin file
 
 if (defined('TDIARY_THEME')) {
-	define('SKIN_FILE', DATA_HOME . SKIN_DIR . 'tdiary.skin.php');
+    define('SKIN_FILE', DATA_HOME . SKIN_DIR . 'tdiary.skin.php');
 } else {
-	// define('SKIN_FILE', DATA_HOME . SKIN_DIR . 'pukiwiki.skin.php'); // 行頭に「//」をつけて標準スキンを無効に
-	define('SKIN_FILE', DATA_HOME . SKIN_DIR . 'ika.skin.php'); // 代わりにイカスキンを設定
+    // define('SKIN_FILE', DATA_HOME . SKIN_DIR . 'pukiwiki.skin.php'); // 行頭に「//」をつけて標準スキンを無効に
+    define('SKIN_FILE', DATA_HOME . SKIN_DIR . 'ika.skin.php'); // 代わりにイカスキンを設定
 }
 ```
 
