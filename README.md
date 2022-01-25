@@ -13,7 +13,7 @@
 
 <br>
 
-<img src="https://user-images.githubusercontent.com/3040830/150872313-17e8c443-7c37-467b-af84-fd1dee1a1091.png" width="475"/>
+<img src="https://user-images.githubusercontent.com/3040830/150940298-eec8ce3b-9fd8-4797-a999-6bc884563444.png" width="567"/>
 
 <br>
 
