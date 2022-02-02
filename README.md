@@ -24,6 +24,7 @@
 |対象PukiWikiバージョン|対象PHPバージョン|
 |:---:|:---:|
 |PukiWiki 1.5.3 ~ 1.5.4RC (UTF-8)|PHP 7.4 ~ 8.1|
+
 <br>
 
 **ご注意**  
@@ -36,7 +37,7 @@ Internet Explorer（IE）などのいわゆるレガシーブラウザーには�
 
 下記 GitHub ページからダウンロードした ika.skin.php を PukiWiki の skin ディレクトリに配置してください。
 
-https://github.com/ikamonster/pukiwiki-ikaskin
+[https://github.com/ikamonster/pukiwiki-ikaskin](https://github.com/ikamonster/pukiwiki-ikaskin)
 
 次に、PukiWiki ルートディレクトリにある設定ファイル default.ini.php を開き、冒頭の SKIN_FILE 定義を下記のように書き換えてください。
 
