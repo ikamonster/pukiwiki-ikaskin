@@ -1,5 +1,3 @@
-<meta name="google-site-verification" content="_pzN1dcFPUaFYxcPlHEiya8gcZHC-Mw45k8oKt0IP6I" />
-
 # PukiWiki用スキン<br>イカスキン ika.skin.php
 
 次の特長を持つ[PukiWiki](https://pukiwiki.osdn.jp/)用スキン。
