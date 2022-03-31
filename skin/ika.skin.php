@@ -1,6 +1,6 @@
 <?php
 // PukiWiki - Yet another WikiWikiWeb clone.
-// ika.skin.php v1.2.6
+// ika.skin.php v1.2.7
 // Copyright 2020 M.Taniguchi
 // License: GPL v3 or (at your option) any later version
 //
@@ -105,7 +105,7 @@ header('Content-Type: text/html; charset=' . CONTENT_CHARSET);
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <meta charset="UTF-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=<?php echo CONTENT_CHARSET ?>" />
-<meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,viewport-fit=cover" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
 <meta name="content-language" content="<?php echo LANG ?>" itemprop="inLanguage" />
 <meta name="<?php echo $author ?>" content="<?php echo $modifier ?>" itemprop="<?php echo $author ?>" />
 <meta name="title" content="<?php echo $longTitle ?>" itemprop="headline" />
