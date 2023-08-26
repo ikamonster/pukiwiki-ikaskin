@@ -12,6 +12,8 @@
 本文領域の幅・文字サイズ・行間隔・禁則有無などを、CSSに触れずに変更できる
 - **すっきり印刷**  
 印刷時に余分なUIや装飾が除かれる
+- **アクセシビリティ対応**  
+キーボード操作や文字サイズ変更、ハイコントラスト表示に対応（PukiWiki本体やプラグインに由来する不都合を除く）
 
 <br>
 
@@ -21,12 +23,12 @@
 
 |対象PukiWikiバージョン|対象PHPバージョン|
 |:---:|:---:|
-|PukiWiki 1.5.3 ~ 1.5.4 (UTF-8)|PHP 7.4 ~ 8.1|
+|PukiWiki 1.5.3 ~ 1.5.4 (UTF-8)|PHP 7.4 ~ 8.2|
 
 <br>
 
 **ご注意**  
-Internet Explorer（IE）などのいわゆるレガシーブラウザーには対応しておらず、対応予定もありません。  
+Internet Explorer などのいわゆるレガシーブラウザーには対応しておらず、対応予定もありません。  
 非対応ブラウザーでは表示が著しく乱れてしまうため、レガシーブラウザーでのアクセスが多く見込まれるサイトには適していません。
 
 <br>
@@ -71,10 +73,10 @@ define('IKASKIN_THEME',             0); // カラーテーマ（0:ライト, 1:�
 define('IKASKIN_LINKCOLOR_LIGHT',  ''); // ライトテーマのリンク色（例：'#0000ff'）
 define('IKASKIN_LINKCOLOR_DARK',   ''); // ダークテーマのリンク色（例：'#0000ff'）
 define('IKASKIN_SHOW_LASTMODIFIED', 0); // 最終更新日時を表示（0:No, 1:Yes）
-define('IKASKIN_FONT_SIZE',         0); // 文字サイズ（px単位, 0:デフォルト）
+define('IKASKIN_FONT_SIZE',        ''); // 文字サイズ・単位（例：'1.2em' '14px'）
 define('IKASKIN_LINE_HEIGHT',       0); // 行の高さ（em単位, 0:デフォルト）
-define('IKASKIN_MENU_WIDTH',        0); // メニューバーの幅（px単位, 0:デフォルト）
-define('IKASKIN_BODY_WIDTH',        0); // ページ本文の幅（px単位, 0:デフォルト）
+define('IKASKIN_MENU_WIDTH',       ''); // メニューバーの幅・単位（例：'15em' '200px'）
+define('IKASKIN_BODY_WIDTH',       ''); // ページ本文の幅・単位（例：'35em' '600px'）
 define('IKASKIN_WORDWRAP',          1); // 改行規則（0:禁則なし, 1:禁則あり）
 define('IKASKIN_SIMPLIFY',          0); // シンプル表示（0:No, 1:Yes）
 define('IKASKIN_COPYRIGHT',         0); // 管理人名の接頭辞（0:"Site admin", 1:"©", または任意文字列）
@@ -93,7 +95,7 @@ define('IKASKIN_DISUSE_SEARCH2JS',  0); // search2.js不使用（0:No, 1:Yes）
 変更したい項目の値を説明に基づいて書き換えます。  
 ファイル名などの文字列は、必ず半角クォーテーション（「'」か「"」）で囲んでください。
 
-たとえば、文字の大きさを変更したければ「IKASIKIN_FONT_SIZE」の値を「16」などとします。  
+たとえば、文字の大きさを変更したければ「IKASIKIN_FONT_SIZE」の値を「'1.2em'」などとします。  
 サイトロゴのファイルを指定したければ「IKASKIN_LOGO」の値を「'pukiwiki.png'」などとします。  
 変更の必要のない項目はそのままで構いません。
 
