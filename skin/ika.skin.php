@@ -1,6 +1,6 @@
 <?php
 // PukiWiki - Yet another WikiWikiWeb clone.
-// ika.skin.php v1.3.4
+// ika.skin.php v1.3.5
 // Copyright 2020 M. Taniguchi
 // License: GPL v3 or (at your option) any later version
 //
@@ -11,7 +11,7 @@
 // Settings for Ika skin
 
 if (!defined('IKASKIN_TITLE'))             define('IKASKIN_TITLE',             0); // Header title (0:Page title, 1:Wiki title)
-if (!defined('IKASKIN_THEME'))             define('IKASKIN_THEME',             2); // Color theme (0:Light, 1:Dark, 2:Adaptive)
+if (!defined('IKASKIN_THEME'))             define('IKASKIN_THEME',             0); // Color theme (0:Light, 1:Dark, 2:Adaptive)
 if (!defined('IKASKIN_LINKCOLOR_LIGHT'))   define('IKASKIN_LINKCOLOR_LIGHT',  ''); // Link color for light theme (ex. '#0000ff')
 if (!defined('IKASKIN_LINKCOLOR_DARK'))    define('IKASKIN_LINKCOLOR_DARK',   ''); // Link color for dark theme (ex. '#0000ff')
 if (!defined('IKASKIN_SHOW_LASTMODIFIED')) define('IKASKIN_SHOW_LASTMODIFIED', 0); // Show last modified (0:No, 1:Yes)
@@ -111,8 +111,7 @@ header('Content-Type: text/html; charset=' . CONTENT_CHARSET);
 <meta name="date" content="<?php echo $modifiedDate; ?>"/>
 <meta name="classification" content="wiki"/>
 <meta name="format-detection" content="telephone=no"/>
-<meta name="theme-color" media="(prefers-color-scheme:light)" content="#fff" id="_meta-theme-color-light_"/>
-<meta name="theme-color" media="(prefers-color-scheme:dark)" content="#222" id="_meta-theme-color-dark_"/>
+<?php if (IKASKIN_THEME == 2) { echo '<meta name="theme-color" media="(prefers-color-scheme:light)" content="#fff"/><meta name="theme-color" media="(prefers-color-scheme:dark)" content="#222"/>'; } else { echo '<meta name="theme-color" content="' . (!IKASKIN_THEME ? '#fff' : '#222') . '"/>'; } ?>
 <?php if ($nofollow || ! $is_read)  { ?><meta name="robots" content="noindex,nofollow,noarchive"/><?php } ?>
 <?php if ($html_meta_referrer_policy) { ?><meta name="referrer" content="<?php echo htmlsc(html_meta_referrer_policy); ?>"/><?php } ?>
 
