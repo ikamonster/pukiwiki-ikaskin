@@ -1,6 +1,6 @@
 <?php
 // PukiWiki - Yet another WikiWikiWeb clone.
-// ika.skin.php v1.3.0
+// ika.skin.php v1.3.2
 // Copyright 2020 M. Taniguchi
 // License: GPL v3 or (at your option) any later version
 //
@@ -15,10 +15,10 @@ if (!defined('IKASKIN_THEME'))             define('IKASKIN_THEME',             0
 if (!defined('IKASKIN_LINKCOLOR_LIGHT'))   define('IKASKIN_LINKCOLOR_LIGHT',  ''); // Link color for light theme (ex. '#0000ff')
 if (!defined('IKASKIN_LINKCOLOR_DARK'))    define('IKASKIN_LINKCOLOR_DARK',   ''); // Link color for dark theme (ex. '#0000ff')
 if (!defined('IKASKIN_SHOW_LASTMODIFIED')) define('IKASKIN_SHOW_LASTMODIFIED', 0); // Show last modified (0:No, 1:Yes)
-if (!defined('IKASKIN_FONT_SIZE'))         define('IKASKIN_FONT_SIZE',         0); // Font size (px, 0:Default)
+if (!defined('IKASKIN_FONT_SIZE'))         define('IKASKIN_FONT_SIZE',        ''); // Font size (ex. '1.2em' '14px')
 if (!defined('IKASKIN_LINE_HEIGHT'))       define('IKASKIN_LINE_HEIGHT',       0); // Line height (em, 0:Default)
-if (!defined('IKASKIN_MENU_WIDTH'))        define('IKASKIN_MENU_WIDTH',        0); // Width of MenuBar (px, 0:Default)
-if (!defined('IKASKIN_BODY_WIDTH'))        define('IKASKIN_BODY_WIDTH',        0); // Width of article body (px, 0:Default)
+if (!defined('IKASKIN_MENU_WIDTH'))        define('IKASKIN_MENU_WIDTH',       ''); // Width of MenuBar (ex. '15em' '200px')
+if (!defined('IKASKIN_BODY_WIDTH'))        define('IKASKIN_BODY_WIDTH',       ''); // Width of article body (ex. '35em' '600px')
 if (!defined('IKASKIN_WORDWRAP'))          define('IKASKIN_WORDWRAP',          1); // Line breaking rules (0:Break, 1:Wrap)
 if (!defined('IKASKIN_SIMPLIFY'))          define('IKASKIN_SIMPLIFY',          0); // Simplify decorating style (0:No, 1:Yes)
 if (!defined('IKASKIN_COPYRIGHT'))         define('IKASKIN_COPYRIGHT',         0); // Admin's name prefix (0:"Site admin", 1:"©" or any string)
@@ -81,10 +81,10 @@ $rightbar = exist_plugin_convert('rightbar')? do_plugin_convert('rightbar') : fa
 $cssProperties = '';
 if (IKASKIN_LINKCOLOR_LIGHT) $cssProperties .= '--color-link-user:' . IKASKIN_LINKCOLOR_LIGHT . ';';
 if (IKASKIN_LINKCOLOR_DARK) $cssProperties .= '--dcolor-link-user:' . IKASKIN_LINKCOLOR_DARK . ';';
-if (IKASKIN_FONT_SIZE) $cssProperties .= '--font-size-user:' . (float)IKASKIN_FONT_SIZE . 'px;';
+if (IKASKIN_FONT_SIZE) $cssProperties .= '--font-size-user:' . IKASKIN_FONT_SIZE . ';';
 if (IKASKIN_LINE_HEIGHT) $cssProperties .= '--line-height-user:' . (float)IKASKIN_LINE_HEIGHT . 'em;';
-if (IKASKIN_MENU_WIDTH) $cssProperties .= '--menu-width-user:' . (float)IKASKIN_MENU_WIDTH . 'px;';
-if (IKASKIN_BODY_WIDTH) $cssProperties .= '--body-width-user:' . (float)IKASKIN_BODY_WIDTH . 'px;';
+if (IKASKIN_MENU_WIDTH) $cssProperties .= '--menu-width-user:' . IKASKIN_MENU_WIDTH . ';';
+if (IKASKIN_BODY_WIDTH) $cssProperties .= '--body-width-user:' . IKASKIN_BODY_WIDTH . ';';
 if (IKASKIN_MENU_ORDER == 1) $cssProperties .= '--order-menubar:3;--order-rightbar:1;';
 if (($menu && IKASKIN_MENU_ORDER == 0) || ($rightbar && IKASKIN_MENU_ORDER == 1)) $cssProperties .= '--margin-article-left:var(--margin-ui);';
 if (($menu && IKASKIN_MENU_ORDER == 1) || ($rightbar && IKASKIN_MENU_ORDER == 0)) $cssProperties .= '--margin-article-right:var(--margin-ui);';
@@ -144,8 +144,8 @@ if (IKASKIN_CSS) echo '<link rel="stylesheet" type="text/css" href="' . SKIN_DIR
 <?php echo $html_scripting_data ?>
 
 <header id="header">
-	<a class="SkipLink" href="#contents">本文へ移動</a>
-	<?php if ($menu) echo '<a class="SkipLink" href="#menubar">サブメニューへ移動</a>'; ?>
+	<a class="SkipLink" href="#contents">Skip to main content</a>
+	<?php if ($menu) echo '<a class="SkipLink" href="#menubar">Skip to sub menu</a>'; ?>
 
 	<div>
 		<a href="<?php echo $link['top'] ?>"><?php
