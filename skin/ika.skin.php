@@ -11,7 +11,7 @@
 // Settings for Ika skin
 
 if (!defined('IKASKIN_TITLE'))             define('IKASKIN_TITLE',             0); // Header title (0:Page title, 1:Wiki title)
-if (!defined('IKASKIN_THEME'))             define('IKASKIN_THEME',             0); // Color theme (0:Light, 1:Dark, 2:Adaptive)
+if (!defined('IKASKIN_THEME'))             define('IKASKIN_THEME',             2); // Color theme (0:Light, 1:Dark, 2:Adaptive)
 if (!defined('IKASKIN_LINKCOLOR_LIGHT'))   define('IKASKIN_LINKCOLOR_LIGHT',  ''); // Link color for light theme (ex. '#0000ff')
 if (!defined('IKASKIN_LINKCOLOR_DARK'))    define('IKASKIN_LINKCOLOR_DARK',   ''); // Link color for dark theme (ex. '#0000ff')
 if (!defined('IKASKIN_SHOW_LASTMODIFIED')) define('IKASKIN_SHOW_LASTMODIFIED', 0); // Show last modified (0:No, 1:Yes)
