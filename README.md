@@ -13,7 +13,8 @@
 - **すっきり印刷**  
 印刷時に余分なUIや装飾が除かれる
 - **アクセシビリティ対応**  
-キーボード操作や拡大縮小、ハイコントラスト表示に対応（PukiWiki本体やプラグインに由来する不都合を除く）
+キーボード操作や拡大縮小、ハイコントラスト表示に対応  
+（axe DevTools, IBM Equal Access Accessibility Checker, HTML Validator, Lighthouse の監査に合格。ただし PukiWiki 本体やプラグイン、投稿内容に由来するエラーは除く）
 
 <br>
 
