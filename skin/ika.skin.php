@@ -1,6 +1,6 @@
 <?php
 // PukiWiki - Yet another WikiWikiWeb clone.
-// ika.skin.php v1.3.12
+// ika.skin.php v1.3.13
 // Copyright 2020 M. Taniguchi
 // License: GPL v3 or (at your option) any later version
 //
@@ -89,7 +89,7 @@ if (IKASKIN_MENU_ORDER == 1) $cssProperties .= '--order-menubar:3;--order-rightb
 if (($menu && IKASKIN_MENU_ORDER == 0) || ($rightbar && IKASKIN_MENU_ORDER == 1)) $cssProperties .= '--margin-article-left:var(--margin-ui);';
 if (($menu && IKASKIN_MENU_ORDER == 1) || ($rightbar && IKASKIN_MENU_ORDER == 0)) $cssProperties .= '--margin-article-right:var(--margin-ui);';
 if ($cssProperties) $cssProperties = ':root{' . $cssProperties . '}';
-if (IKASKIN_TABLE_ZEBRA) $cssProperties .= 'tr:nth-child(even){background-color:var(--color-bg-table)}';
+if (IKASKIN_TABLE_ZEBRA) $cssProperties .= 'tbody tr:nth-of-type(odd){background-color:var(--color-bg-table)}';
 
 // ------------------------------------------------------------
 // Output
