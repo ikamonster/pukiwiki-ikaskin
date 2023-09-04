@@ -69,7 +69,7 @@ if (defined('TDIARY_THEME')) {
 ```PHP
 /////////////////////////////////////////////////
 // イカスキン設定（ika.skin.php）
-define('IKASKIN_TITLE',             0); // ヘッダータイトル（0:ページ名, 1:ウィキ名）
+define('IKASKIN_TITLE',             1); // ヘッダータイトル（0:ページ名, 1:ウィキ名）
 define('IKASKIN_THEME',             0); // カラーテーマ（0:ライト, 1:ダーク, 2:OS設定に自動適応）
 define('IKASKIN_LINKCOLOR_LIGHT',  ''); // ライトテーマのリンク色（例：'#0000ff'）
 define('IKASKIN_LINKCOLOR_DARK',   ''); // ダークテーマのリンク色（例：'#0000ff'）
