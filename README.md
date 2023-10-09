@@ -78,6 +78,7 @@ define('IKASKIN_FONT_SIZE',        ''); // 文字サイズ・単位（例：'93.
 define('IKASKIN_LINE_HEIGHT',       0); // 行の高さ（em単位, 0:デフォルト）
 define('IKASKIN_MENU_WIDTH',       ''); // メニューバーの幅・単位（例：'15em' '200px'）
 define('IKASKIN_BODY_WIDTH',       ''); // ページ本文の幅・単位（例：'35em' '600px'）
+define('IKASKIN_TABLE_WIDTH',      ''); // 表の幅・単位（例：'100%' 'auto'）
 define('IKASKIN_WORDWRAP',          1); // 改行規則（0:禁則なし, 1:禁則あり）
 define('IKASKIN_SIMPLIFY',          0); // シンプル表示（0:No, 1:Yes）
 define('IKASKIN_COPYRIGHT',         0); // 管理人名の接頭辞（0:"Site admin", 1:"©", または任意文字列）
