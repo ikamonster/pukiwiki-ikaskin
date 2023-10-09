@@ -74,7 +74,7 @@ define('IKASKIN_THEME',             0); // カラーテーマ（0:ライト, 1:�
 define('IKASKIN_LINKCOLOR_LIGHT',  ''); // ライトテーマのリンク色（例：'#0000ff'）
 define('IKASKIN_LINKCOLOR_DARK',   ''); // ダークテーマのリンク色（例：'#0000ff'）
 define('IKASKIN_SHOW_LASTMODIFIED', 0); // 最終更新日時を表示（0:No, 1:Yes）
-define('IKASKIN_FONT_SIZE',        ''); // 文字サイズ・単位（例：'1.2em' '14px'）
+define('IKASKIN_FONT_SIZE',        ''); // 文字サイズ・単位（例：'93.75%' '15px'）
 define('IKASKIN_LINE_HEIGHT',       0); // 行の高さ（em単位, 0:デフォルト）
 define('IKASKIN_MENU_WIDTH',       ''); // メニューバーの幅・単位（例：'15em' '200px'）
 define('IKASKIN_BODY_WIDTH',       ''); // ページ本文の幅・単位（例：'35em' '600px'）
@@ -89,6 +89,7 @@ define('IKASKIN_APPLETOUCHICON',   ''); // 180×180px PNGアイコン画像パ�
 define('IKASKIN_CSS',              ''); // 追加CSSファイルパス（例：'mystyle.css'）
 define('IKASKIN_DISUSE_MAINJS',     0); // main.js不使用（0:No, 1:Yes）
 define('IKASKIN_DISUSE_SEARCH2JS',  0); // search2.js不使用（0:No, 1:Yes）
+define('IKASKIN_HEAD_CODE',        ''); // head要素内に挿入するHTMLコード（例：アナリティクススニペット等）
 ```
 
 左の「IKASKIN_○○」が設定項目名、カンマの後の ’’ や 0 が設定値です。さらに右側には項目の説明コメントがあります。
@@ -96,7 +97,7 @@ define('IKASKIN_DISUSE_SEARCH2JS',  0); // search2.js不使用（0:No, 1:Yes）
 変更したい項目の値を説明に基づいて書き換えます。  
 ファイル名などの文字列は、必ず半角クォーテーション（「'」か「"」）で囲んでください。
 
-たとえば、文字の大きさを変更したければ「IKASIKIN_FONT_SIZE」の値を「'1.2em'」などとします。  
+たとえば、文字の大きさを変更したければ「IKASIKIN_FONT_SIZE」の値を「'120%'」などとします。  
 サイトロゴのファイルを指定したければ「IKASKIN_LOGO」の値を「'pukiwiki.png'」などとします。  
 変更の必要のない項目はそのままで構いません。
 
