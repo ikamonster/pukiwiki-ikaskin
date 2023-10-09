@@ -84,6 +84,7 @@ define('IKASKIN_SIMPLIFY',          0); // シンプル表示（0:No, 1:Yes）
 define('IKASKIN_COPYRIGHT',         0); // 管理人名の接頭辞（0:"Site admin", 1:"©", または任意文字列）
 define('IKASKIN_MENU_ORDER',        0); // メニューバーの表示順序（0:MenuBar→本文→RightBar, 1:RightBar→本文→MenuBar）
 define('IKASKIN_TABLE_ZEBRA',       0); // テーブル行の交互色分け（0:No, 1:Yes）
+define('IKASKIN_IMAGE_BORDER',      0); // 画像の境界（0:なし, 1:境界線, 2:影）
 define('IKASKIN_LOGO',             ''); // サイトロゴ画像パス（例：'image/pukiwiki.png'）
 define('IKASKIN_FAVICON',          ''); // ファビコン画像パス（例：'/favicon.ico'）
 define('IKASKIN_APPLETOUCHICON',   ''); // 180×180px PNGアイコン画像パス（例：'apple-touch-icon.png'）
